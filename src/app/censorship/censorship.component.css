@@ -1,0 +1,57 @@
+.mat-mdc-card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* censorship.component.scss */
+.carousel-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 10px; /* Adjust this value to control the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+  background-color: #2196F3;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+mat-icon {
+  font-size: 24px;
+  cursor: pointer;
+}/*# sourceMappingURL=censorship.component.css.map */

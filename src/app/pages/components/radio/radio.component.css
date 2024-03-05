@@ -1,0 +1,7 @@
+.radio {
+  display: inline-flex;
+  flex-direction: column;
+}
+.radio .mat-mdc-radio-button {
+  margin-bottom: 12px;
+}/*# sourceMappingURL=radio.component.css.map */

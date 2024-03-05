@@ -1,0 +1,18 @@
+<fury-page-layout class="editor" fxLayout="column" mode="card">
+  <fury-page-layout-header>
+    <fury-breadcrumbs current="WYSIWYG Editor"></fury-breadcrumbs>
+  </fury-page-layout-header>
+
+  <fury-page-layout-content fxFlex="auto" fxLayout="column">
+    <!-- <quill-editor [@fadeInUp] [formControl]="form" [styles]="{ flex: '1 1 auto' }" class="quill card mat-elevation-z16"
+      fxFlex="auto" fxLayout="column"></quill-editor>
+      <button mat-raised-button color="primary" (click)="saveBlog()">Save Blog</button>
+     -->
+      <quill-editor #quillEditor [@fadeInUp] [formControl]="form" [styles]="{ flex: '1 1 auto' }" class="quill card mat-elevation-z16"
+      fxFlex="auto" fxLayout="column"></quill-editor>
+    <button mat-raised-button color="primary" (click)="saveBlog()">Save Blog</button>
+    
+    <!-- <quill-editor [content]="content" (contentChanged)="onContentChanged($event)"></quill-editor> -->
+
+  </fury-page-layout-content>
+</fury-page-layout>

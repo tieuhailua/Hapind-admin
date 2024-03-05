@@ -1,0 +1,91 @@
+<div class="search-wrapper" fxLayout="row" [ngClass]="{ 'focus': focused, 'has-input': input }" fxFlex
+     (furyClickOutside)="closeDropdown()">
+     <mat-icon class="search-icon">search</mat-icon>
+     <input type="search" autocomplete="off" spellcheck="false" class="search-input" [(ngModel)]="input"
+          (focus)="openDropdown()" placeholder="Search...">
+
+     <div class="search-dropdown">
+          <div class="content results" *ngIf="input" fxLayout="column">
+               <div class="heading" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon class="icon">search</mat-icon>
+                    Search results for: {{ input }}
+               </div>
+               <div class="items">
+                    <div class="item" *ngIf="isItemMatched('/dashboard')" matRipple [routerLink]="['/dashboard']">
+                         Dashboard</div>
+                    <div class="item" *ngIf="isItemMatched('/user')" matRipple [routerLink]="['/user']">
+                         User</div>
+                    <div class="item" *ngIf="isItemMatched('/family')" matRipple [routerLink]="['/family']">
+                         Family</div>
+                    <div class="item" *ngIf="isItemMatched('/drinking')" matRipple [routerLink]="['/drinking']">
+                         Drinking</div>
+                    <div class="item" *ngIf="isItemMatched('/music')" matRipple [routerLink]="['/music']">
+                         Music</div>
+                    <div class="item" *ngIf="isItemMatched('/work')" matRipple [routerLink]="['/work']">
+                         Work</div>
+                    <div class="item" *ngIf="isItemMatched('/status')" matRipple [routerLink]="['/status']">
+                         Status</div>
+                    <div class="item" *ngIf="isItemMatched('/smoking')" matRipple [routerLink]="['/smoking']">
+                         Smoking</div>
+                    <div class="item" *ngIf="isItemMatched('/purpose')" matRipple [routerLink]="['/purpose']">
+                         Purpose</div>
+                    <div class="item" *ngIf="isItemMatched('/literacy')" matRipple [routerLink]="['/literacy']">
+                         Literacy</div>
+                    <div class="item" *ngIf="isItemMatched('/habit')" matRipple [routerLink]="['/habit']">
+                         Habit</div>
+                    <div class="item" *ngIf="isItemMatched('/reason')" matRipple [routerLink]="['/reason']">
+                         Reason</div>
+                    <div class="item" *ngIf="isItemMatched('/exercise')" matRipple [routerLink]="['/exercise']">
+                         Exercise</div>
+                    <div class="item" *ngIf="isItemMatched('/expecting')" matRipple [routerLink]="['/expecting']">
+                         Expecting</div>
+                    <div class="item" *ngIf="isItemMatched('/hobby')" matRipple [routerLink]="['/hobby']">
+                         Hobby</div>
+                    <div class="item" *ngIf="isItemMatched('/pet')" matRipple [routerLink]="['/pet']">
+                         Pet</div>
+                    <div class="item" *ngIf="isItemMatched('/singer')" matRipple [routerLink]="['/singer']">
+                         Singer</div>
+                    <div class="item" *ngIf="isItemMatched('/report')" matRipple [routerLink]="['/report']">Report</div>
+                    <div class="item" *ngIf="isItemMatched('/censorship')" matRipple [routerLink]="['/censorship']">
+                         Censorship</div>
+                    <div class="item" *ngIf="isItemMatched('/blog')" matRipple [routerLink]="['/editor']">Blog</div>
+               </div>
+          </div>
+
+          <!-- <div class="content recents" fxLayout="row" *ngIf="!input">
+               <div class="recently" fxLayout="column" fxFlex>
+                    <div class="heading" fxLayout="row" fxLayoutAlign="start center">
+                         <mat-icon class="icon">restore</mat-icon>
+                         Recently Visited
+                    </div>
+                    <div class="items">
+                         <div class="item" matRipple *ngFor="let item of recentlyVisited"
+                              [routerLink]="item.routeOrFunction" (click)="closeDropdown()">{{ item.name }}
+                         </div>
+                    </div>
+               </div>
+
+               <div class="frequently" fxLayout="column" fxFlex fxFlexOffset="16px">
+                    <div class="heading" fxLayout="row" fxLayoutAlign="start center">
+                         <mat-icon class="icon">youtube_searched_for</mat-icon>
+                         Frequently Visited
+                    </div>
+                    <div class="items">
+                         <div class="item" matRipple [routerLink]="['/forms/form-elements']" (click)="closeDropdown()">
+                              Form Elements
+                         </div>
+                         <div class="item" matRipple [routerLink]="['/forms/form-wizard']" (click)="closeDropdown()">
+                              Form Wizard
+                         </div>
+                         <div class="item" matRipple [routerLink]="['/editor']" (click)="closeDropdown()">WYSIWYG Editor
+                         </div>
+                         <div class="item" matRipple [routerLink]="['/apps/inbox']" (click)="closeDropdown()">Inbox
+                         </div>
+                         <div class="item" matRipple [routerLink]="['/components/dialogs']" (click)="closeDropdown()">
+                              Material Dialog
+                         </div>
+                    </div>
+               </div>
+          </div> -->
+     </div>
+</div>

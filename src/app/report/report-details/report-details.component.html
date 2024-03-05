@@ -1,0 +1,71 @@
+<div mat-dialog-title>Evidence</div>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+  <mat-dialog-content>
+    <!-- <mat-card> -->
+        <!-- <mat-card-header>
+            <img mat-card-avatar src="assets/img/avatars/3.jpg">
+            <mat-card-subtitle>
+                Yesterday
+            </mat-card-subtitle>
+            <mat-card-title>Censorship</mat-card-title>
+        </mat-card-header> -->
+        <!-- <img mat-card-image src="assets/img/backgrounds/1.jpg"> -->
+        <!-- censorship.component.html -->
+        <!-- censorship.component.html -->
+        <!-- <div class="carousel-container">
+            <img [@carouselAnimation]="currentIndex" class="carousel-image" [src]="slides[currentIndex].image"
+                alt="Slide Image" />
+            <div class="slide-indicators">
+                <div *ngFor="let evidence of form.get('evidences').value; let i = index" class="indicator"
+                    [class.active]="i === currentIndex" (click)="goToSlide(i)">
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <mat-icon (click)="changeSlide(-1)">keyboard_arrow_left</mat-icon>
+
+                <mat-icon (click)="changeSlide(1)">keyboard_arrow_right</mat-icon>
+            </div>
+        </div> -->
+        <div class="carousel-container">
+          <img [@carouselAnimation]="currentIndex" class="carousel-image" [src]="getEvidenceImages()[currentIndex]" alt="Slide Image" />
+          <div class="slide-indicators">
+            <div *ngFor="let evidence of getEvidenceImages(); let i = index" class="indicator" [class.active]="i === currentIndex" (click)="goToSlide(i)">
+              <!-- You can use custom SVG icons for indicators if you prefer -->
+            </div>
+          </div>
+          <div class="carousel-buttons" *ngIf="getEvidenceImages().length > 1">
+            <mat-icon (click)="changeSlide(-1)">keyboard_arrow_left</mat-icon>
+            <mat-icon (click)="changeSlide(1)">keyboard_arrow_right</mat-icon>
+          </div>
+        </div>
+        <!-- <mat-card-content>
+            <p>Piqued favour stairs it enable exeter as seeing. Remainder met improving but engrossed sincerity age.
+                Better but length gay denied abroad are. Attachment astonished to on appearance imprudence so
+                collecting in excellence. Tiled way blind lived whose new. The for fully had she there leave merit
+                enjoy forth. </p>
+        </mat-card-content> -->
+        <mat-divider></mat-divider>
+        <!-- <mat-card-actions fxLayout="row" fxLayoutAlign="center">
+            <button mat-button>
+                Accept
+              </button>
+            <button mat-button>
+              Refuse
+            </button>
+          </mat-card-actions>
+    </mat-card> -->
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="center">
+    <!-- <button >Banned 
+    </button> -->
+    <button mat-button>
+        Accept
+      </button>
+    <button mat-button>
+      Refuse
+    </button>
+</mat-dialog-actions>
+</form>
